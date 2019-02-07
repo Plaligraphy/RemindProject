@@ -35,8 +35,8 @@ function main() {
 function dataCol() {
   console.log("Choices: (Backup (b), Recall (r)");
   var ans = rls.question("");
-  if(ans == 'b' || ans == 'B'){backup();}
-  else if(ans == 'r' || ans == 'R'){recall();}
+  if(ans == 'b' || ans == 'B'){backup(); main();}
+  else if(ans == 'r' || ans == 'R'){recall(); main();}
 }
 
 function create() {
