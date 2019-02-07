@@ -1,6 +1,6 @@
 var nodemailer = require('nodemailer');
 const fs = require('fs');
-var sendTo, contents, pass = "bobcat2002";
+var sendTo, contents, pass = "";
 
 exports.mail = function sendMail(contents, sendTo) {
   var transporter = nodemailer.createTransport({

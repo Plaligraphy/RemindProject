@@ -9,10 +9,8 @@ var dar;
 
 main();
 
+//Main function
 function main() {
-  reminds[0] ="uno";
-  reminds[1]="dos";
-  reminds[2] = "tres";
   cls();
   console.log("R3M1ND");
   console.log("Options( create (c), edit (e), web (w), view (v), mail (m), exit(ex) )");
@@ -24,7 +22,7 @@ function main() {
   else if(opt1 == 'm' || opt1 == "M"){mail();}
   else if(opt1 == 'd' || opt1 == 'D') {debug();}
   else if(opt1 == 'ex' || opt1 == 'Ex') {process.exit(0);}
-
+  
   function createHTTP() {
     http.createServer(function (req, res) {
       res.write("<h1>R3M1ND</h1>");
