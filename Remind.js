@@ -13,14 +13,14 @@ main();
 function main() {
   cls();
   console.log("R3M1ND");
-  console.log("Options( create (c), edit (e), web (w), view (v), mail (m), exit(ex) )");
+  console.log("Options( create (c), edit (e), web (w), view (v), mail (m), data (d), exit(ex) )");
   var opt1 = rls.question();
   if(opt1 == "c" || opt1 == "C") {create();}
   else if(opt1 == 'w' || opt1 == 'W') {createHTTP();}
   else if(opt1 == "e" || opt1 == "E") {edit();}
   else if(opt1 == 'v' || opt1 == "V") {view();}
   else if(opt1 == 'm' || opt1 == "M"){mail();}
-  else if(opt1 == 'd' || opt1 == 'D') {debug();}
+  else if(opt1 == 'd' || opt1 == 'D') {dataCol();}
   else if(opt1 == 'ex' || opt1 == 'Ex') {process.exit(0);}
   
   function createHTTP() {
@@ -31,6 +31,14 @@ function main() {
     }).listen(8080);
   }
 }
+
+function dataCol() {
+  console.log("Choices: (Backup (b), Recall (r)");
+  var ans = rls.question("");
+  if(ans == 'b' || ans == 'B'){backup();}
+  else if(ans == 'r' || ans == 'R'){recall();}
+}
+
 function create() {
   cls();
   var remind = rls.question("Reminder: ");
