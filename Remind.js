@@ -15,9 +15,10 @@ function main() {
   reminds[2] = "tres";
   cls();
   console.log("R3M1ND");
-  console.log("Options( create (c), edit (e), view (v), mail (m), exit(ex) )");
+  console.log("Options( create (c), edit (e), web (w), view (v), mail (m), exit(ex) )");
   var opt1 = rls.question();
   if(opt1 == "c" || opt1 == "C") {create();}
+  else if(opt1 == 'w' || opt1 == 'W') {createHTTP();}
   else if(opt1 == "e" || opt1 == "E") {edit();}
   else if(opt1 == 'v' || opt1 == "V") {view();}
   else if(opt1 == 'm' || opt1 == "M"){mail();}
@@ -28,7 +29,7 @@ function main() {
     http.createServer(function (req, res) {
       res.write("<h1>R3M1ND</h1>");
       res.write("Current Reminders: ");
-      res.write(reminds);
+      res.write(String(reminds));
     }).listen(8080);
   }
 }
