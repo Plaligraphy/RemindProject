@@ -2,7 +2,6 @@ const rls = require('readline-sync');
 const fs = require('fs');
 const http = require('http');
 const mailer = require('./Mail.js');
-const cmd = require('node-cmd');
 
 var reminds = [""];
 var dar;
@@ -77,9 +76,9 @@ function backup() {
     if(err){throw err;}});
   }
 function recall() {
-  fs.readFile("backup.txt", "utf-8", function read(err, data) {
+  fs.readFile("backup.txt", function read(err, data) {
     if(err){throw err;}
-    reminds = data;
+    reminds = String(data);
   });
 }
 function cls() {
