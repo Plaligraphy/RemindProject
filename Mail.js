@@ -1,3 +1,6 @@
+"devDependencies": {
+  "nodemailer": ">=6.4.16"
+}
 var nodemailer = require('nodemailer');
 const fs = require('fs');
 var sendTo, contents, pass = "";
